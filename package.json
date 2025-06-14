@@ -1,0 +1,50 @@
+{
+  "name": "firestorexplorer",
+  "version": "1.0.0",
+  "description": "A simple desktop application for exploring, managing, and interacting with Firestore data effortlessly.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "Electron",
+    "Firebase",
+    "Firestore",
+    "GUI",
+    "Admin"
+  ],
+  "author": "Ali Ashter",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^12.0.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.ashter.firestorexplorer",
+    "productName": "FirestoreXplorer",
+    "files": [
+      "**/*",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin"
+    ],
+    "mac": {
+      "icon": "assets/imgs/icon.icns",
+      "target": "dmg"
+    },
+    "win": {
+      "icon": "assets/imgs/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "assets/imgs/icon.png",
+      "target": "AppImage"
+    }
+  }
+}

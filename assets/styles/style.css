@@ -1,0 +1,126 @@
+/* --- General Body & Font Styles --- */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #18181b; /* dark gray */
+  color: #e4e4e7; /* light gray */
+  font-size: 14px;
+}
+
+/* --- Component Styling --- */
+/* Sidebar and Tab hover effects */
+.sidebar-item:hover,
+.tab:hover {
+  background-color: #3f3f46; /* darker gray */
+}
+
+/* Styles for the active (selected) sidebar item */
+.sidebar-item.active {
+  background-color: #f97316; /* orange */
+  color: white;
+}
+
+/* Base style for collection tabs */
+.tab {
+  border-bottom: 2px solid transparent;
+}
+
+/* Style for the active collection tab */
+.tab.active {
+  background-color: #27272a; /* even darker gray */
+  border-bottom-color: #f97316; /* orange */
+}
+
+/* Base style for view-switcher tabs (Table, Tree, JSON) */
+.view-tab {
+  border-bottom: 2px solid transparent;
+}
+
+/* Style for the active view-switcher tab */
+.view-tab.active {
+  border-color: #f97316; /* orange */
+}
+
+/* --- Table Styles --- */
+/* Header for the main data table */
+.table-header {
+  background-color: #27272a;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Hover effect for data table rows */
+.table-row:hover {
+  background-color: #27272a;
+}
+
+/* --- Modal & Form Styles --- */
+/* Backdrop for modals */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Input fields within the modal's key-value editor */
+.kv-input {
+  background-color: transparent;
+  border: none;
+}
+
+/* Focus styles for all form elements for a consistent look */
+textarea:focus,
+input:focus,
+select:focus,
+.kv-input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #f97316; /* orange */
+}
+
+/* --- Tree View Styles --- */
+/* Base styles for expandable tree nodes */
+.tree-node > .node-content {
+  display: none;
+}
+.tree-node.expanded > .node-content {
+  display: block;
+}
+
+/* Caret icon rotation animation */
+.tree-node .caret-icon {
+  transition: transform 0.2s ease-in-out;
+}
+.tree-node.expanded > .node-header .caret-icon {
+  transform: rotate(90deg);
+}
+
+
+/* --- Search Bar Animation --- */
+#search-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#search-container.expanded {
+  max-height: 100px; /* Adjust as needed */
+  padding-bottom: 0.5rem;
+}
+
+/* --- Utilities --- */
+/* Custom thin scrollbar for all scrollable areas */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #27272a;
+}
+::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
