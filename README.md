@@ -28,11 +28,11 @@ A simple and powerful desktop application for exploring, managing, and interacti
 *View all your collections in the sidebar and open them in easily manageable tabs.*
 ![Main application view showing collections and tabs](./assets/screen1.png)
 
-**Advanced Document Editor**
+**Easy Document Editor**
 *Edit documents using a spreadsheet-style field editor or the raw JSON view, with two-way data binding.*
 ![Modal showing the document editor](./assets/screen2.png)
 
-**Powerful Search & Filtering**
+**Simple Search & Filtering**
 *Filter your data with multiple operators to quickly find the documents you need.*
 ![Search bar with operators and results](./assets/screen3.png)
 
